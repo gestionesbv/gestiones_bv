@@ -9,10 +9,19 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+    }
+
+    /* Superposición de fondo con transparencia */
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: url('https://gestionesbv.github.io/gestiones_bv/Como-crear-una-estrategia-de-marketing-en-redes-sociales-01.png') no-repeat center center fixed;
-      background-size: cover; 
-      background-color: rgba(255, 255, 255, 0.15); /* Aplica una capa de transparencia */
-      background-blend-mode: lighten; /* Ajusta el modo de mezcla para suavizar */
+      background-size: cover;
+      opacity: 0.15; /* Transparencia del fondo al 15% */
+      z-index: -1; /* Coloca la capa detrás del contenido */
     }
 
     .content {
@@ -76,6 +85,9 @@
   </style>
 </head>
 <body>
+  <!-- Superposición para la imagen de fondo -->
+  <div class="background-overlay"></div>
+  
   <header>
     <h1>Gestiones BV</h1>
   </header>
