@@ -10,26 +10,36 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('https://gestionesbv.github.io/gestiones_bv/Como-crear-una-estrategia-de-marketing-en-redes-sociales-01.png') no-repeat center center fixed;
-      background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+      background-size: cover; 
     }
 
     .content {
-      min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
-      padding-bottom: 50px; /* Espacio reservado para el footer */
+      min-height: 100vh; 
+      padding-bottom: 50px; 
       text-align: center;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.85); /* Fondo blanco con 15% de transparencia */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .message-box {
+      background: #ffffff; /* Fondo blanco sólido */
+      padding: 30px; /* Espaciado interno */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar relieve */
+      max-width: 800px; /* Ancho máximo */
+      text-align: center;
     }
 
     .footer {
       position: fixed; /* Fija el footer al final de la ventana */
       bottom: 0;
       left: 0;
-      width: 100%; /* Asegura que ocupe todo el ancho */
+      width: 100%; 
       text-align: center; /* Centra el texto */
-      font-family: 'Georgia', 'Times New Roman', serif; /* Fuente elegante */
-      font-size: 14px; /* Tamaño de letra moderado */
+      font-family: 'Georgia', 'Times New Roman', serif; 
+      font-size: 14px; /* Tamaño de letra 
       color: #555; /* Color gris corporativo */
       background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
       padding: 10px 0; /* Espaciado interno */
@@ -74,16 +84,18 @@
     <a href="contacto.html">Contáctanos</a>
   </nav>
   <div class="content">
-    <h2>Maximiza tus Resultados con Gestiones BV</h2>
-    <p>
-      En <strong>Gestiones BV</strong>, nos especializamos en ayudar a nuestros clientes a alcanzar sus metas financieras a través de análisis de datos avanzados y estrategias de posicionamiento de marca.
-    </p>
-    <p>
-      Nuestra misión es transformar la manera en que las empresas aprovechan sus datos para generar valor sostenible, enfocándonos en la precisión, la excelencia y el crecimiento.
-    </p>
-    <p>
-      Descubre cómo nuestras soluciones innovadoras pueden marcar la diferencia en tu negocio.
-    </p>
+    <div class="message-box">
+      <h2>Maximiza tus Resultados con Gestiones BV</h2>
+      <p>
+        En <strong>Gestiones BV</strong>, nos especializamos en ayudar a nuestros clientes a alcanzar sus metas financieras a través de análisis de datos avanzados y estrategias de posicionamiento de marca.
+      </p>
+      <p>
+        Nuestra misión es transformar la manera en que las empresas aprovechan sus datos para generar valor sostenible, enfocándonos en la precisión, la excelencia y el crecimiento.
+      </p>
+      <p>
+        Descubre cómo nuestras soluciones innovadoras pueden marcar la diferencia en tu negocio.
+      </p>
+    </div>
   </div>
   <footer class="footer">
     © 2024 Gestiones BV | Transformación Digital y Marketing de Datos
