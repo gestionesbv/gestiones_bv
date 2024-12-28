@@ -1,56 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias por tu Solicitud - Gestiones BV</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f7f7f7;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por tu Solicitud - Gestiones BV</title>
+  <style>
+    /* CSS general */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
 
-        div {
-            background: #ffffff;
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    /* Superposición de fondo con transparencia */
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://gestionesbv.github.io/gestiones_bv/Como-crear-una-estrategia-de-marketing-en-redes-sociales-01.png') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.3; /* Transparencia del fondo al 30% */
+      z-index: -1; /* Coloca la capa detrás del contenido */
+    }
 
-        h1 {
-            color: #6a7a96;
-            margin-bottom: 20px;
-        }
+    .message-box {
+      background: #ffffff; /* Fondo blanco sólido */
+      padding: 40px; /* Espaciado interno */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar relieve */
+      max-width: 600px; /* Ancho máximo */
+      width: 100%; /* Asegura que se adapte a pantallas más pequeñas */
+      text-align: center;
+    }
 
-        p {
-            margin: 10px 0;
-            font-size: 1.2rem;
-        }
+    h1 {
+      color: #6a7a96;
+      margin-bottom: 20px;
+    }
 
-        a {
-            color: #6a7a96;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    a {
+      color: #6a7a96;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <h1>¡Gracias por tu solicitud!</h1>
-        <p>Hemos recibido tu solicitud de eliminación de datos. La procesaremos dentro de un plazo de 20 días hábiles.</p>
-        <p>Si tienes alguna consulta adicional, no dudes en <a href="mailto:equipo@gestionesbv.com">contactarnos</a>.</p>
-    </div>
+  <!-- Superposición para la imagen de fondo -->
+  <div class="background-overlay"></div>
+
+  <div class="message-box">
+    <h1>¡Gracias por tu solicitud!</h1>
+    <p>Hemos recibido tu solicitud de eliminación de datos. La procesaremos dentro de un plazo de 20 días hábiles.</p>
+    <p>Si tienes alguna consulta adicional, no dudes en <a href="mailto:equipo@gestionesbv.com">contactarnos</a>.</p>
+  </div>
 </body>
 </html>
