@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Gestiones BV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #d3d9e3;
+            color: #333;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #c2c9d6;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #6a7a96;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background-color: #6a7a96;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a6a83;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            background: #d3d9e3;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #6a7a96;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestiones BV</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="politica_privacidad.html">Política de Privacidad</a>
+            <a href="eliminacion_datos.html">Eliminación de Datos</a>
+            <a href="terminos_condiciones.html">Términos y Condiciones</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="contacto.html">Contáctanos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contáctate con Nosotros</h2>
+        <p><strong>Súmate al desafío digital</strong></p>
+        <p>
+            Estamos aquí para ayudarte a maximizar tus resultados. Por favor, completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.
+        </p>
+        <form action="https://formsubmit.co/equipo@gestionesbv.com" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" required>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" placeholder="Tu cargo en la empresa" required>
+
+            <label for="telefono">Teléfono Móvil (con código de área):</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: +56912345678" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí"></textarea>
+
+            <!-- Configuración adicional -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="gracias.html">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2024 Gestiones BV | Transformación Digital y Marketing de Datos
+    </footer>
+</body>
+</html>
