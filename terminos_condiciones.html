@@ -1,134 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - Gestiones BV</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones - Gestiones BV</title>
+  <style>
+    /* CSS general */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        header {
-            background-color: #d3d9e3;
-            color: #333;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    /* Superposición de fondo con transparencia */
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://gestionesbv.github.io/gestiones_bv/Como-crear-una-estrategia-de-marketing-en-redes-sociales-01.png') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.3; /* Transparencia del fondo al 30% */
+      z-index: -1; /* Coloca la capa detrás del contenido */
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
+    .content {
+      min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+      padding-bottom: 50px; /* Espacio reservado para el footer */
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Mueve el contenido hacia arriba */
+      margin-top: 50px; /* Espacio extra arriba */
+    }
 
-        nav {
-            display: flex;
-            gap: 15px;
-        }
+    .message-box {
+      background: #ffffff; /* Fondo blanco sólido */
+      padding: 40px; /* Espaciado interno */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar relieve */
+      max-width: 900px; /* Ancho máximo */
+      width: 100%; /* Asegura que se adapte a pantallas más pequeñas */
+      text-align: left; /* Alineación izquierda para textos largos */
+      line-height: 1.8;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+    .footer {
+      position: fixed; /* Fija el footer al final de la ventana */
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      text-align: center; /* Centra el texto */
+      font-family: 'Georgia', 'Times New Roman', serif; /* Fuente elegante */
+      font-size: 14px; /* Tamaño de letra moderado */
+      color: #555; /* Color gris corporativo */
+      background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
+      padding: 10px 0; /* Espaciado interno */
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
 
-        nav a:hover {
-            background-color: #c2c9d6;
-        }
+    header, nav {
+      background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
+      padding: 10px 0;
+      text-align: center;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
 
-        h2 {
-            color: #6a7a96;
-        }
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
 
-        p {
-            line-height: 1.6;
-            margin: 10px 0;
-        }
+    h2 {
+      color: #6a7a96;
+      margin-bottom: 20px;
+    }
 
-        ol {
-            margin: 15px 0;
-            padding-left: 20px;
-        }
+    h3 {
+      color: #6a7a96;
+      margin-top: 20px;
+    }
 
-        ol li {
-            margin-bottom: 10px;
-        }
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-            background: #d3d9e3;
-            color: #333;
-            font-size: 0.9rem;
-        }
+    ol {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
 
-        footer a {
-            color: #6a7a96;
-            text-decoration: none;
-        }
+    ol li {
+      margin-bottom: 10px;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    a {
+      color: #6a7a96;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Gestiones BV</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="politica_privacidad.html">Política de Privacidad</a>
-            <a href="eliminacion_datos.html">Eliminación de Datos</a>
-            <a href="terminos_condiciones.html">Términos y Condiciones</a>
-            <a href="cultura.html">Cultura</a>
-            <a href="contacto.html">Contáctanos</a>
-        </nav>
-    </header>
+  <!-- Superposición para la imagen de fondo -->
+  <div class="background-overlay"></div>
 
-    <main>
-        <h2>Términos y Condiciones</h2>
-        <p>Al utilizar los servicios de Gestiones BV, aceptas los siguientes términos y condiciones:</p>
-        
-        <h3>1. Uso del Sitio</h3>
-        <ol>
-            <li>Este sitio y sus servicios están diseñados para ayudar a los usuarios a maximizar el rendimiento de sus negocios a través del análisis de datos.</li>
-            <li>Los usuarios deben proporcionar información precisa al interactuar con nuestros servicios.</li>
-        </ol>
+  <header>
+    <h1>Gestiones BV</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="politica_privacidad.html">Política de Privacidad</a>
+      <a href="eliminacion_datos.html">Eliminación de Datos</a>
+      <a href="terminos_condiciones.html">Términos y Condiciones</a>
+      <a href="cultura.html">Cultura</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
 
-        <h3>2. Responsabilidad del Usuario</h3>
-        <ol>
-            <li>El usuario es responsable de mantener la confidencialidad de sus datos de acceso.</li>
-            <li>El usuario se compromete a no utilizar nuestros servicios para actividades ilícitas.</li>
-        </ol>
+  <div class="content">
+    <div class="message-box">
+      <h2>Términos y Condiciones</h2>
+      <p>Al utilizar los servicios de Gestiones BV, aceptas los siguientes términos y condiciones:</p>
+      
+      <h3>1. Uso del Sitio</h3>
+      <ol>
+        <li>Este sitio y sus servicios están diseñados para ayudar a los usuarios a maximizar el rendimiento de sus negocios a través del análisis de datos.</li>
+        <li>Los usuarios deben proporcionar información precisa al interactuar con nuestros servicios.</li>
+      </ol>
 
-        <h3>3. Privacidad</h3>
-        <p>Para más detalles sobre cómo manejamos tus datos, consulta nuestra <a href="politica_privacidad.html">Política de Privacidad</a>.</p>
+      <h3>2. Responsabilidad del Usuario</h3>
+      <ol>
+        <li>El usuario es responsable de mantener la confidencialidad de sus datos de acceso.</li>
+        <li>El usuario se compromete a no utilizar nuestros servicios para actividades ilícitas.</li>
+      </ol>
 
-        <h3>4. Modificaciones</h3>
-        <p>Gestiones BV se reserva el derecho de modificar estos términos en cualquier momento. Los usuarios serán notificados de los cambios relevantes.</p>
-    </main>
+      <h3>3. Privacidad</h3>
+      <p>Para más detalles sobre cómo manejamos tus datos, consulta nuestra <a href="politica_privacidad.html">Política de Privacidad</a>.</p>
 
-    <footer>
-        &copy; 2024 Gestiones BV | Transformación Digital y Marketing de Datos
-    </footer>
+      <h3>4. Modificaciones</h3>
+      <p>Gestiones BV se reserva el derecho de modificar estos términos en cualquier momento. Los usuarios serán notificados de los cambios relevantes.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &copy; 2024 Gestiones BV | Transformación Digital y Marketing de Datos
+  </footer>
 </body>
 </html>
