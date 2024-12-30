@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidad - Gestiones BV</title>
   <style>
-    /* CSS general */
-    body {
+    /* Ajustes globales */
+    html, body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      height: 100%;
+      font-family: 'Helvetica', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #333;
     }
 
-    /* Superposición de fondo con transparencia */
     .background-overlay {
       position: fixed;
       top: 0;
@@ -20,91 +25,137 @@
       height: 100%;
       background: url('https://gestionesbv.github.io/gestiones_bv/Como-crear-una-estrategia-de-marketing-en-redes-sociales-01.png') no-repeat center center fixed;
       background-size: cover;
-      opacity: 0.3; /* Transparencia del fondo al 30% */
-      z-index: -1; /* Coloca la capa detrás del contenido */
+      opacity: 0.3;
+      z-index: -1;
     }
 
-    .content {
-      min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
-      padding-bottom: 50px; /* Espacio reservado para el footer */
-      text-align: center;
-      padding: 20px;
+    header {
+      background-color: #333;
+      color: #fff;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-size: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: flex-start; /* Mueve el contenido hacia arriba */
-      margin-top: 50px; /* Espacio extra arriba */
-    }
-
-    .message-box {
-      background: #ffffff; /* Fondo blanco sólido */
-      padding: 40px; /* Espaciado interno */
-      border-radius: 10px; /* Bordes redondeados */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar relieve */
-      max-width: 900px; /* Ancho máximo */
-      width: 100%; /* Asegura que se adapte a pantallas más pequeñas */
-      text-align: left; /* Alineación izquierda para textos largos */
-      line-height: 1.8;
-    }
-
-    .footer {
-      position: fixed; /* Fija el footer al final de la ventana */
-      bottom: 0;
-      left: 0;
-      width: 100%; /* Asegura que ocupe todo el ancho */
-      text-align: center; /* Centra el texto */
-      font-family: 'Georgia', 'Times New Roman', serif; /* Fuente elegante */
-      font-size: 14px; /* Tamaño de letra moderado */
-      color: #555; /* Color gris corporativo */
-      background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
-      padding: 10px 0; /* Espaciado interno */
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    }
-
-    header, nav {
-      background-color: rgba(248, 249, 250, 0.85); /* Fondo claro con transparencia */
-      padding: 10px 0;
-      text-align: center;
     }
 
     nav a {
-      margin: 0 15px;
       text-decoration: none;
-      color: #555;
+      color: #fff;
       font-weight: bold;
+      font-size: 0.9em;
+      padding: 8px 12px;
+      border-radius: 5px;
+      white-space: nowrap;
     }
 
-    h1 {
-      font-size: 2em;
-      color: #333;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    h2 {
+    .content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .message-box {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .message-box h2 {
       color: #6a7a96;
+      font-size: 2em;
       margin-bottom: 20px;
+      text-align: center;
     }
 
-    h3 {
+    .message-box h3 {
       color: #6a7a96;
       margin-top: 20px;
     }
 
-    p {
-      margin: 10px 0;
+    .message-box p {
+      color: #666;
+      font-size: 1.1em;
       line-height: 1.6;
     }
 
-    a {
+    .message-box a {
       color: #6a7a96;
       text-decoration: none;
     }
 
-    a:hover {
+    .message-box a:hover {
       text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0;
+      }
+
+      nav a {
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        display: block;
+      }
+
+      .message-box {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Superposición para la imagen de fondo -->
   <div class="background-overlay"></div>
 
   <header>
@@ -140,7 +191,7 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer>
     &copy; 2024 Gestiones BV | Transformación Digital y Marketing de Datos
   </footer>
 </body>
